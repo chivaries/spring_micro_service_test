@@ -1,0 +1,14 @@
+
+spring:
+  application:
+    name: licensingservice
+  profiles:
+    active:
+      default
+#  cloud:
+#    config:
+#      uri: http://localhost:8888  # config 를 직접 호출할 경우
+  cloud:
+    config:
+      enabled: true
+debug: true

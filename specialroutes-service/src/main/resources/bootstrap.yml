@@ -1,0 +1,11 @@
+server:
+  port: 8095
+spring:
+  application:
+    name: specialroutesservice
+  profiles:
+    active:
+      default
+  cloud:
+    config:
+      enabled: true

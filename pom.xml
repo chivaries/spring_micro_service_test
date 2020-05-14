@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.glamrock</groupId>
+    <artifactId>spring_micro_service_test</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>configserver</module>
+        <module>licensing-service</module>
+        <module>eurekaserver</module>
+        <module>organization-service</module>
+        <module>zuulserver</module>
+        <module>specialroutes-service</module>
+        <module>orgservice-new</module>
+        <module>authentication-service</module>
+    </modules>
+    <packaging>pom</packaging>
+
+    <name>spring-micro-service-parent-pom</name>
+    <description>Parent Pom for the spring micro service test project</description>
+
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.0.3.RELEASE</version>
+    </parent>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>com.spotify</groupId>
+                <artifactId>docker-maven-plugin</artifactId>
+                <version>1.1.1</version>
+                <configuration>
+                    <baseImage>java</baseImage>
+                    <imageName>example</imageName>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>

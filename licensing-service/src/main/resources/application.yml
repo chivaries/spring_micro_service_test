@@ -1,0 +1,59 @@
+#example.property: "I AM IN THE DEFAULT"
+#spring.jpa.database: "POSTGRESQL"
+#spring.datasource.platform:  "postgres"
+#spring.datasource.initialize: "true"
+#spring.jpa.show-sql: "true"
+#spring.database.driverClassName: "org.postgresql.Driver"
+#spring.datasource.url: "jdbc:postgresql://localhost:5432/eagle_eye_local"
+#spring.datasource.username: "postgres"
+#spring.datasource.password: "p0stgr@s"
+#spring.datasource.testWhileIdle: "true"
+#spring.datasource.validationQuery: "SELECT 1"
+#spring.jpa.generate-ddl: "true"
+#spring.jpa.properties.hibernate.dialect: "org.hibernate.dialect.PostgreSQLDialect"
+#spring.jpa.hibernate.ddl-auto: "create-drop"
+#spring.jpa.hibernate.naming.implicit-strategy: "org.hibernate.boot.model.naming.ImplicitNamingStrategyLegacyHbmImpl"
+#spring.jpa.hibernate.naming.physical-strategy: "org.springframework.boot.orm.jpa.hibernate.SpringPhysicalNamingStrategy"
+#redis.server: "redis"
+#redis.port: "6379"
+#signing.key: "345345fsdfsf5345"
+# expose all built-in endpoints (health, env, refresh and others) for testing
+eureka:
+  instance:
+    preferIpAddress: true
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+
+spring:
+  cloud:
+    stream:
+      bindings:
+        inboundOrgChanges:
+          destination: orgChangeTopic
+          content-type: application/json
+          group: licensingGroup
+      kafka:
+        binder:
+          zkNodes: localhost
+          brokers: localhost
+#        input:
+#          destination: orgChangeTopic
+#          content-type: application/json
+#          group: licensingGroup
+
+
+security:
+  oauth2:
+    resource:
+       userInfoUri: http://localhost:8901/auth/user
+
+#Setting logging levels
+logging:
+    level:
+      org.apache.kafka: ERROR
+      com.netflix: WARN
+      org.springframework.web: WARN
+      com.glamrock: DEBUG

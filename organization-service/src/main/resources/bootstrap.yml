@@ -1,0 +1,11 @@
+server:
+  port: 8085
+spring:
+  application:
+    name: organizationservice
+  profiles:
+    active:
+      default
+  cloud:
+    config:
+      enabled: true

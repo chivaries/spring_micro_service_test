@@ -1,0 +1,15 @@
+server:
+  port: 8888
+spring:
+  cloud:
+    config:
+      discovery:
+        enabled: true
+      server:
+        encrypt:
+          enabled: false
+        git:
+          uri: https://github.com/chivaries/config-repo
+          searchPaths: licensingservice, organizationservice, zuulservice, specialroutesservice
+          username: chivaries
+          password: free4all

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="authentication-service" />
+        <module name="configserver" />
+        <module name="eurekaserver" />
+        <module name="licensing-service" />
+        <module name="licensingservice" />
+        <module name="organization-service" />
+        <module name="orgservice-new" />
+        <module name="orgservicenew" />
+        <module name="specialroutes-service" />
+        <module name="specialroutesservice" />
+        <module name="zuulserver" />
+        <module name="zuulservice" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="authentication-service" target="1.8" />
+      <module name="configserver" target="1.8" />
+      <module name="eurekaserver" target="1.8" />
+      <module name="licensing-service" target="1.8" />
+      <module name="licensingservice" target="1.8" />
+      <module name="organization-service" target="1.8" />
+      <module name="orgservice-new" target="1.8" />
+      <module name="orgservicenew" target="1.8" />
+      <module name="specialroutes-service" target="1.8" />
+      <module name="specialroutesservice" target="1.8" />
+      <module name="spring_micro_service_test" target="1.8" />
+      <module name="zuulserver" target="1.8" />
+      <module name="zuulservice" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
